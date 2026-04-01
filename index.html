@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perplexity UI Clone</title>
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-top">
+                <div class="search-btn active">
+                    <i class="fa-solid fa-magnifying-glass"></i> Search
+                </div>
+                <div class="nav-item">
+                    <i class="fa-solid fa-desktop"></i> Computer
+                </div>
+                
+                <button class="new-thread-btn" id="new-thread-btn">
+                    <i class="fa-solid fa-plus"></i> New thread
+                </button>
+                
+                <nav class="nav-menu">
+                    <a href="#" class="nav-item"><i class="fa-solid fa-clock-rotate-left"></i> History</a>
+                    <a href="#" class="nav-item"><i class="fa-regular fa-compass"></i> Discover</a>
+                    <a href="#" class="nav-item"><i class="fa-solid fa-shapes"></i> Spaces</a>
+                    <a href="#" class="nav-item"><i class="fa-solid fa-chart-line"></i> Finance</a>
+                    <a href="#" class="nav-item"><i class="fa-regular fa-heart"></i> Health</a>
+                    <a href="#" class="nav-item"><i class="fa-solid fa-ellipsis"></i> More</a>
+                </nav>
+
+                <div class="recent-section">
+                    <div class="section-title">Recent</div>
+                    <a href="#" class="recent-item">Design a logistics tracking...</a>
+                </div>
+            </div>
+
+            <div class="sidebar-bottom">
+                <button class="upgrade-btn">
+                    <i class="fa-solid fa-arrow-up"></i> Upgrade plan
+                    <span class="notification-dot"></span>
+                </button>
+                <div class="user-profile">
+                    <div class="avatar">D</div>
+                    <div class="username">Dileep Janapa...</div>
+                    <i class="fa-regular fa-bell"></i>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <header class="top-header">
+                <div class="announcement-banner">
+                    <span class="badge">New</span> Computer is now available on Pro <a href="#" class="upgrade-link">Upgrade <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="header-actions">
+                    <button class="action-btn"><i class="fa-regular fa-calendar"></i> Scheduled <i class="fa-solid fa-chevron-down"></i></button>
+                    <button class="icon-btn"><i class="fa-solid fa-print"></i></button>
+                </div>
+            </header>
+
+            <div class="center-wrapper">
+                <h1 class="logo">perplexity</h1>
+                
+                <!-- Chat Feed Container -->
+                <div id="chat-feed" class="chat-feed-hidden">
+                    <!-- Messages will be injected here dynamically -->
+                </div>
+
+                <!-- File Attachment Status UI -->
+                <div id="file-attachment-indicator" class="file-attachment-hidden">
+                    <i class="fa-solid fa-file-pdf"></i> <span id="attached-filename">Attached</span>
+                </div>
+
+                <div class="search-container">
+                    <div class="search-input-wrapper">
+                        <!-- Reset Button -->
+                        <button id="reset-btn" class="attach-btn" title="Clear thread">
+                            <i class="fa-solid fa-trash-can"></i>
+                        </button>
+
+                        <!-- File Upload Button -->
+                        <label for="pdf-upload" class="attach-btn" title="Upload PDF">
+                            <i class="fa-solid fa-paperclip"></i>
+                        </label>
+                        <input type="file" id="pdf-upload" accept=".pdf" style="display: none;">
+                        
+                        <textarea placeholder="Ask anything... (or ask about a PDF)" rows="1"></textarea>
+                    </div>
+                    
+                    <div class="search-controls">
+                        <div class="left-controls">
+                            <button class="circle-btn"><i class="fa-solid fa-plus"></i></button>
+                            <button class="pill-btn"><i class="fa-solid fa-desktop"></i> Computer <i class="fa-solid fa-plus"></i></button>
+                        </div>
+                        <div class="right-controls">
+                            <button class="text-btn">Model <i class="fa-solid fa-chevron-down"></i></button>
+                            <button class="icon-btn"><i class="fa-solid fa-microphone"></i></button>
+                            <button class="submit-btn"><i class="fa-solid fa-bars-staggered"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="suggestions-container">
+                    <div class="suggestions-header">
+                        <i class="fa-solid fa-desktop"></i> Try Computer
+                    </div>
+                    <div class="suggestion-chips">
+                        <button class="chip active"><i class="fa-solid fa-code"></i> Create a prototype</button>
+                        <button class="chip"><i class="fa-regular fa-eye"></i> Monitor the situation</button>
+                        <button class="chip"><i class="fa-solid fa-briefcase"></i> Build a business</button>
+                        <button class="chip"><i class="fa-regular fa-lightbulb"></i> Help me...</button>
+                    </div>
+                    <div class="suggestion-list">
+                        <a href="#" class="suggestion-item">Create an internal tool for my team</a>
+                        <a href="#" class="suggestion-item">Build a working landing page for my product</a>
+                        <a href="#" class="suggestion-item">Set up an automated email or Slack workflow</a>
+                        <a href="#" class="suggestion-item">Turn my idea into a functional prototype</a>
+                        <a href="#" class="suggestion-item">Build a web app with user auth and a database</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
